@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Mbg ❤️</title>
+<title>Untuk Mbg </title>
 
 <style>
 *{
@@ -30,6 +31,7 @@ body{
     padding:30px;
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,.2);
+    z-index:2;
 }
 
 h1{
@@ -77,7 +79,7 @@ button{
     position:fixed;
     color:white;
     font-size:25px;
-    animation:fall 5s linear infinite;
+    animation:fall linear infinite;
 }
 
 @keyframes fall{
@@ -88,40 +90,35 @@ button{
         transform:translateY(110vh);
     }
 }
-
-#message{
-    margin-top:20px;
-    font-size:24px;
-    color:#ff4081;
-    font-weight:bold;
-}
 </style>
-
 </head>
+
 <body>
 
 <div class="container">
 
-<h1>Mau kah anda menjadi mbg saya? 💖</h1>
+<h1>Mau kah anda menjadi mbg saya? </h1>
 
 <img src="anjing.jpg" alt="Anjing Lucu">
 
-<p>Pilih dengan hati yaa... 🥰</p>
+<p>Pilih dengan hati yaa... </p>
 
 <div class="buttons">
-<button id="yesBtn">Iya 💖</button>
-<button id="noBtn">Tidak 😢</button>
+<button id="yesBtn">Iya </button>
+<button id="noBtn">Tidak </button>
 </div>
 
-<div id="message"></div>
-
 </div>
+
+<audio id="musik" loop>
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 
-for(let i=0;i<20;i++){
+for(let i=0;i<25;i++){
     let heart=document.createElement("div");
-    heart.innerHTML="💖";
+    heart.innerHTML="";
     heart.className="heart";
     heart.style.left=Math.random()*100+"vw";
     heart.style.animationDuration=(Math.random()*3+3)+"s";
@@ -145,22 +142,25 @@ document.getElementById("noBtn").onclick=function(){
 
 document.getElementById("yesBtn").onclick=function(){
 
+    document.getElementById("musik").play();
+
     document.querySelector(".container").innerHTML=`
-        <h1>YEEEEY ❤️🥰</h1>
-        <img src="anjing.jpg"
+        <h1>YEEEEY </h1>
+
+        <img src="anjing.jpg" alt="Anjing Lucu">
+
         <p style="font-size:25px;">
-            Sekarang kamu resmi jadi mbg saya 💖✨
+            Sekarang kamu resmi jadi mbg saya 
+        </p>
+
+        <p>
+            Makasih udah milih aku 
         </p>
     `;
 }
-<button onclick="document.getElementById('musik').play()">
-    Putar Musik 
-</button>
 
-<audio id="musik" loop>
-    <source src="lagu.mp3" type="audio/mpeg">
-</audio>
 </script>
 
 </body>
 </html>
+```
