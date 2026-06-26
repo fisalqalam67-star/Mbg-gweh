@@ -153,7 +153,11 @@ document.getElementById("yesBtn").onclick=function(){
         </p>
     `;
 }
-<audio autoplay loop>
+<button onclick="document.getElementById('musik').play()">
+    Putar Musik 
+</button>
+
+<audio id="musik" loop>
     <source src="lagu.mp3" type="audio/mpeg">
 </audio>
 </script>
